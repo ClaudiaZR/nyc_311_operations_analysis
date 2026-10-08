@@ -321,11 +321,33 @@ Operational reporting could track median resolution time alongside aging or long
 
 ---
 
-## Project Documentation
+## 10. Project Documentation
 
 * [SQL / SQLite workflow](sql/README.md)
 * [Dataset documentation](data/README.md)
 * [Tableau analysis and dashboards](tableau/README.md)
+
+## 11. Project Structure
+
+```text
+nyc_311_operations_analysis/
+├── README.md
+├── sql/
+│   ├── README.md
+│   └── nyc_311_analysis.sql
+├── data/
+│   └── README.md
+└── tableau/
+    └── README.md
+```
+
+* `README.md` — Project overview, methodology, key findings, and recommendations.
+* `sql/` — SQL scripts and documentation for data exploration, validation, and transformation.
+* `data/` — Dataset source information and data workflow documentation.
+* `tableau/` — Documentation for the Tableau analysis and dashboards.
+
+The raw database, exported CSV, and Tableau workbook are not currently included in this repository.
+
 
 ## Dataset Source
 
