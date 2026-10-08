@@ -349,7 +349,21 @@ nyc_311_operations_analysis/
 The raw database, exported CSV, and Tableau workbook are not currently included in this repository.
 
 
-## Dataset Source
+## 12. Project Workflow
+
+The project follows an **ELT (Extract, Load, Transform)** workflow, followed by visualization and reporting.
+
+1. **Extract:** Obtain the NYC 311 service request data from NYC Open Data and filter it to requests created during 2025.
+2. **Load:** Import the raw dataset into SQLite as `nyc_311_raw`.
+3. **Explore and validate:** Use SQL to examine the data structure, check for missing values and duplicate IDs, validate dates, and investigate data quality issues.
+4. **Transform:** Convert date and time strings into standardized datetime values, calculate resolution time in hours, flag invalid resolution records, and create `nyc_311_clean`.
+5. **Export and connect:** Export the cleaned analytical dataset to CSV and load it into Tableau.
+6. **Analyze and visualize:** Use Tableau to develop KPIs, explore request volume and resolution performance, examine relationships, and build interactive dashboards.
+7. **Document and share:** Record the methodology, findings, and recommendations in GitHub.
+
+
+
+## 13 Dataset Source
 
 [NYC Open Data — 311 Service Requests from 2020 to Present](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9/about_data)
 
