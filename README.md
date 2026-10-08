@@ -13,6 +13,20 @@ The project includes two Tableau dashboards:
 * **NYC 311 Operations Dashboard — 2025:** An overview of request volume and overall resolution performance.
 * **NYC 311 Operational Performance — 2025:** A detailed analysis of hourly demand, resolution patterns, and agency performance.
 
+
+## Tableau Dashboard Preview
+
+### NYC 311 Operations Dashboard — 2025
+
+![NYC 311 Operations Dashboard — 2025](tableau/screenshots/nyc-311-operations-dashboard.png)
+
+### NYC 311 Operational Performance — 2025
+
+![NYC 311 Operational Performance — 2025](tableau/screenshots/nyc-311-operational-performance.png)
+
+For details about the dashboards and analysis, see the [Tableau documentation](tableau/README.md).
+
+
 ## 2. Business Problem
 
 NYC 311 receives millions of service requests each year across a wide range of public services and agencies. Managing this volume requires an understanding of where demand is concentrated, when service demand peaks, which types of requests require the most attention, and how efficiently requests are resolved.
