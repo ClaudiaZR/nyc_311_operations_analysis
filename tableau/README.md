@@ -33,6 +33,10 @@ Executive level dashboard showing:
 - Top 10 problem types
 - Agency resolution performance
 
+
+![NYC 311 Operations Dashboard — 2025](screenshots/nyc-311-operations-dashboard.png)
+
+
 ### NYC 311 Operational Performance — 2025
 
 Operational performance dashboard showing:
@@ -41,6 +45,10 @@ Operational performance dashboard showing:
 - Median resolution time by hour
 - Median resolution time by problem type
 - Agency request volume versus median resolution time
+
+
+![NYC 311 Operational Performance — 2025](screenshots/nyc-311-operational-performance.png)
+
 
 ## Tableau Techniques
 
