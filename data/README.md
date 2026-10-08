@@ -2,25 +2,19 @@
 
 This folder contains documentation related to the NYC 311 dataset used in the project.
 
-## Dataset an Data Files
+
+## Dataset Source
 
 The analysis uses the NYC 311 Service Requests dataset from the NYC Open Data platform.
 
-[Official dataset](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9/about_data)
+
+[Official dataset - NYC Open Data - 311 Service Requests](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9/about_data)
+
 
 For this project, the dataset was filtered to include service requests created form January 1 to December 31, 2025, 
 resulting in 3,655,041 records.
 
-The cleaned dataset used for the Tableau analysis was created using SQL and exported as:
 
-`nyc_311_clean.csv`
-
-Cleaning and validation steps can be found in:
-
-`../sql/nyc_311_analysis.sql`
-
-
-Raw database/CSV: The original dataset is not included in this repository because of the large file size.
 
 ## Data Workflow
 
@@ -48,6 +42,19 @@ A total of 915 records were identified where the closed date occurred before the
 `Invalid - Closed Before Created`
 
 They were excluded from resolution time metrics.
+
+## Data Files
+
+Raw database/CSV: The original dataset is not included in this repository because of the large file size.
+
+The cleaned dataset used for the Tableau analysis was created using SQL and exported as:
+
+`nyc_311_clean.csv`
+
+Cleaning and validation steps can be found in:
+
+`../sql/nyc_311_analysis.sql`
+
 
 ## Privacy
 
