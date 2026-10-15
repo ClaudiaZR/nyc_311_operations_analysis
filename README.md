@@ -63,18 +63,18 @@ For this project, the source data was filtered to include service requests creat
 
 | Field            | Description                                  |
 | ---------------- | -------------------------------------------- |
-| `Unique Key`     | Unique identifier for each service request   |
-| `Created Date`   | Date and time when the request was created   |
-| `Closed Date`    | Date and time when the request was closed    |
-| `Agency`         | Agency responsible for the request           |
-| `Agency Name`    | Full name of the responsible agency          |
-| `Problem`        | Type of service request or complaint         |
-| `Problem Detail` | Additional detail describing the request     |
-| `Location Type`  | Type of location associated with the request |
-| `Incident Zip`   | ZIP code associated with the request         |
-| `Borough`        | NYC borough associated with the request      |
-| `Latitude`       | Geographic latitude                          |
-| `Longitude`      | Geographic longitude                         |
+| Unique Key     | Unique identifier for each service request   |
+| Created Date   | Date and time when the request was created   |
+| Closed Date    | Date and time when the request was closed    |
+| Agency         | Agency responsible for the request           |
+| Agency Name    | Full name of the responsible agency          |
+| Problem        | Type of service request or complaint         |
+| Problem Detail | Additional detail describing the request     |
+| Location Type  | Type of location associated with the request |
+| Incident Zip   | ZIP code associated with the request         |
+| Borough        | NYC borough associated with the request      |
+| Latitude       | Geographic latitude                          |
+| Longitude      | Geographic longitude                         |
 
 ### 4.3 Data Scope
 
@@ -117,18 +117,18 @@ The raw NYC 311 data was loaded into SQLite and transformed into a clean analyti
 The following checks were performed on the raw dataset:
 
 * Confirmed 3,655,041 total records.
-* Verified that `Unique Key` contained no duplicate values.
-* Confirmed that `Created Date`, `Closed Date`, `Agency`, and `Problem` had no missing values.
+* Verified that Unique Key contained no duplicate values.
+* Confirmed that Created Date, Closed Date, Agency, and Problem had no missing values.
 * Validated the date range of the 2025 dataset.
 * Reviewed request distribution across NYC boroughs, including records with an unspecified borough.
 
 ### 6.2 Date and Time Transformation
 
-The source `Created Date` and `Closed Date` fields were stored as text in a 12-hour format containing AM/PM indicators.
+The source Created Date and Closed Date fields were stored as text in a 12-hour format containing AM/PM indicators.
 
 The timestamps were transformed into standardized datetime values in SQLite, accounting for:
 
-* Conversion of 12 AM to hour `00`.
+* Conversion of 12 AM to hour 00.
 * Conversion of PM hours to 24 hour time.
 * Correct preservation of minutes and seconds.
 
@@ -142,21 +142,21 @@ During validation, 915 records were identified where the closed timestamp occurr
 
 Rather than deleting these records, they were retained and assigned the status:
 
-`Invalid - Closed Before Created`
+Invalid - Closed Before Created
 
 All other records were assigned:
 
-`Valid`
+Valid
 
 Invalid records were excluded from resolution-time metrics while remaining in the analytical dataset.
 
 ### 6.4 Analytical Dataset
 
-A clean table named `nyc_311_clean` was created containing 3,655,041 records and the fields required for analysis, including:
+A clean table named nyc_311_clean was created containing 3,655,041 records and the fields required for analysis, including:
 
 * Standardized created and closed datetime fields
-* `resolution_hours`
-* `resolution_status`
+* resolution_hours
+* resolution_status
 
 The clean dataset was exported to CSV and loaded into Tableau for analysis and visualization.
 
@@ -355,10 +355,10 @@ nyc_311_operations_analysis/
     └── README.md
 ```
 
-* `README.md` — Project overview, methodology, key findings, and recommendations.
-* `sql/` — SQL scripts and documentation for data exploration, validation, and transformation.
-* `data/` — Dataset source information and data workflow documentation.
-* `tableau/` — Documentation for the Tableau analysis and dashboards.
+* README.md — Project overview, methodology, key findings, and recommendations.
+* sql/ — SQL scripts and documentation for data exploration, validation, and transformation.
+* data/ — Dataset source information and data workflow documentation.
+* tableau/ — Documentation for the Tableau analysis and dashboards.
 
 The raw database, exported CSV, and Tableau workbook are not currently included in this repository.
 
@@ -368,9 +368,9 @@ The raw database, exported CSV, and Tableau workbook are not currently included 
 The project follows an **ELT (Extract, Load, Transform)** workflow, followed by visualization and reporting.
 
 1. **Extract:** Obtain the NYC 311 service request data from NYC Open Data and filter it to requests created during 2025.
-2. **Load:** Import the raw dataset into SQLite as `nyc_311_raw`.
+2. **Load:** Import the raw dataset into SQLite as nyc_311_raw.
 3. **Explore and validate:** Use SQL to examine the data structure, check for missing values and duplicate IDs, validate dates, and investigate data quality issues.
-4. **Transform:** Convert date and time strings into standardized datetime values, calculate resolution time in hours, flag invalid resolution records, and create `nyc_311_clean`.
+4. **Transform:** Convert date and time strings into standardized datetime values, calculate resolution time in hours, flag invalid resolution records, and create nyc_311_clean.
 5. **Export and connect:** Export the cleaned analytical dataset to CSV and load it into Tableau.
 6. **Analyze and visualize:** Use Tableau to develop KPIs, explore request volume and resolution performance, examine relationships, and build interactive dashboards.
 7. **Document and share:** Record the methodology, findings, and recommendations in GitHub.
