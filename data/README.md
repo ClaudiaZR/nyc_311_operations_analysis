@@ -21,9 +21,9 @@ resulting in 3,655,041 records.
 The raw data was:
 
 1. Extracted from NYC Open Data.
-2. Loaded into SQLite as `nyc_311_raw`.
+2. Loaded into SQLite as nyc_311_raw.
 3. Explored and validated using SQL.
-4. Transformed into the clean analytical table `nyc_311_clean`.
+4. Transformed into the clean analytical table nyc_311_clean.
 5. Exported to CSV for analysis in Tableau.
 
 ## Data Quality
@@ -39,7 +39,7 @@ The dataset was validated for:
 
 A total of 915 records were identified where the closed date occurred before the created date. These records were retained but flagged as:
 
-`Invalid - Closed Before Created`
+Invalid - Closed Before Created
 
 They were excluded from resolution time metrics.
 
@@ -49,11 +49,11 @@ Raw database/CSV: The original dataset is not included in this repository becaus
 
 The cleaned dataset used for the Tableau analysis was created using SQL and exported as:
 
-`nyc_311_clean.csv`
+nyc_311_clean.csv
 
 Cleaning and validation steps can be found in:
 
-`../sql/nyc_311_analysis.sql`
+../sql/nyc_311_analysis.sql
 
 
 ## Privacy
