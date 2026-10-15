@@ -8,8 +8,8 @@ The analysis uses SQLite to transform the raw data into a clean dataset and calc
 
 ## Database and Tables
 
-* **`nyc_311_raw`** — The raw source data filtered to requests created in 2025.
-* **`nyc_311_clean`** — The cleaned and transformed dataset used for analysis.
+* **nyc_311_raw** — The raw source data filtered to requests created in 2025.
+* **nyc_311_clean** — The cleaned and transformed dataset used for analysis.
 
 The raw dataset contains 3,655,041 records.
 
@@ -34,7 +34,7 @@ The SQL analysis includes the following steps:
 
 ## Resolution Time
 
-Resolution time was calculated as the difference between the standardized Closed Date and Created Date timestamps, using SQLite's `julianday()` function.
+Resolution time was calculated as the difference between the standardized Closed Date and Created Date timestamps, using SQLite's julianday() function.
 
 The analysis reports resolution duration in hours. Invalid negative durations are excluded from valid resolution time metrics.
 
